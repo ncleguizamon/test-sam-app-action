@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: ncleguizamon sam test
       id: hello
-      uses: ncleguizamon/aws-sam-python-action@v1.3
+      uses: ncleguizamon/aws-sam-python-action@v1.4
       with:
         STACK: 'app1'
         S3_BUCKET: 'tetdasd'
