@@ -5,12 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     name: test deploy sam 
     steps:
-    - uses: actions/checkout@v1
-    - uses: ncleguizamon/aws-sam-python-action@v1.10
-      with:
-        STACK: 'app1'
-        S3_BUCKET: 'tetdasd'
-        PARAMETER_OVERRIDES: 'branch=master'
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+         uses: ncleguizamon/aws-sam-python-action@v1.10
+         with:
+           STACK: 'app1'
+           S3_BUCKET: 'tetdasd'
+           PARAMETER_OVERRIDES: 'branch=master'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
