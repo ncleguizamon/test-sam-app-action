@@ -10,11 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-         uses: ncleguizamon/aws-sam-python-action@v1.10
-         with:
-           STACK: 'app1'
-           S3_BUCKET: 'tetdasd'
-           PARAMETER_OVERRIDES: 'branch=master'
+        uses: ncleguizamon/aws-sam-python-action@v1.10
+        with:
+         STACK: 'app1'
+         S3_BUCKET: 'tetdasd'
+         PARAMETER_OVERRIDES: 'branch=master'
     # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+
