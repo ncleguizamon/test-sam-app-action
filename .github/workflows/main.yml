@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Hello world action step
-        uses: ncleguizamon/aws-sam-python-action@v1.10
+        uses: ncleguizamon/aws-sam-python-action@v1.11
         with:
          STACK: 'app1'
          S3_BUCKET: 'tetdasd'
