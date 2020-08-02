@@ -15,5 +15,7 @@ jobs:
          STACK: 'app1'
          S3_BUCKET: 'tetdasd'
          PARAMETER_OVERRIDES: 'branch=master'
+      - name: Get the output time
+        run: ls -all         
     # Use the output from the `hello` step
 
